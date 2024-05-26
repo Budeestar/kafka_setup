@@ -1,0 +1,9 @@
+step-1: Navigate to config and open server.properties and zookeeper.properties
+step-2: change log.dirs---- to the folder where you want logs in both server.properties and zookeeper.properties
+step-3: open cmd in kafka folder
+step-4: start the zookeeper using ".\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties"
+step-5: start the server using ".\bin\windows\kafka-server-start.bat .\config\server.properties"
+step-6: open cmd in bin\windows folder
+step-7: create a topic using the command "kafka-topics.bat --create --bootstrap-server localhost:9092 --topic test"
+step-8: start the producer using "kafka-console-producer.bat --broker-list localhost:9092 --topic test"
+step-9: start the consumer using "kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning"
